@@ -16,9 +16,47 @@
         zephyr,display = &oled;
         zmk,kscan = &kscan0;
     };
-    soft_off_wakers {
+ soft_off_wakers {
         compatible = "zmk,soft-off-wakeup-sources";
-        wakeup-sources = <&kscan0>;
+        wakeup-sources = <
+          &gpio_19 &gpio_18 &gpio_15 &gpio_14 &gpio_16 &gpio_10
+        >;
+    };
+
+    gpio_19: gpio_19 {
+        compatible = "zmk,gpio-wakeup-pin";
+        gpios = <&pro_micro 19 GPIO_ACTIVE_HIGH>;
+        sense = <1>;
+    };
+
+    gpio_18: gpio_18 {
+        compatible = "zmk,gpio-wakeup-pin";
+        gpios = <&pro_micro 18 GPIO_ACTIVE_HIGH>;
+        sense = <1>;
+    };
+
+    gpio_15: gpio_15 {
+        compatible = "zmk,gpio-wakeup-pin";
+        gpios = <&pro_micro 15 GPIO_ACTIVE_HIGH>;
+        sense = <1>;
+    };
+
+    gpio_14: gpio_14 {
+        compatible = "zmk,gpio-wakeup-pin";
+        gpios = <&pro_micro 14 GPIO_ACTIVE_HIGH>;
+        sense = <1>;
+    };
+
+    gpio_16: gpio_16 {
+        compatible = "zmk,gpio-wakeup-pin";
+        gpios = <&pro_micro 16 GPIO_ACTIVE_HIGH>;
+        sense = <1>;
+    };
+
+    gpio_10: gpio_10 {
+        compatible = "zmk,gpio-wakeup-pin";
+        gpios = <&pro_micro 10 GPIO_ACTIVE_HIGH>;
+        sense = <1>;
     };
 
     default_transform: keymap_transform_0 {
