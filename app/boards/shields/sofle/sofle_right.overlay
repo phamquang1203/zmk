@@ -46,31 +46,6 @@
 
         /* Define each GPIO key as a child node with gpios property */
 
-        soft_off_gpio_key0: soft_off_gpio_key0 {
-            gpios = <&pro_micro 10 GPIO_ACTIVE_HIGH>;
-            label = "soft_off_0";
-        };
-
-        soft_off_gpio_key1: soft_off_gpio_key1 {
-            gpios = <&pro_micro 16 GPIO_ACTIVE_HIGH>;
-            label = "soft_off_1";
-        };
-
-        soft_off_gpio_key2: soft_off_gpio_key2 {
-            gpios = <&pro_micro 14 GPIO_ACTIVE_HIGH>;
-            label = "soft_off_2";
-        };
-
-        soft_off_gpio_key3: soft_off_gpio_key3 {
-            gpios = <&pro_micro 15 GPIO_ACTIVE_HIGH>;
-            label = "soft_off_3";
-        };
-
-        soft_off_gpio_key4: soft_off_gpio_key4 {
-            gpios = <&pro_micro 18 GPIO_ACTIVE_HIGH>;
-            label = "soft_off_4";
-        };
-
         soft_off_gpio_key5: soft_off_gpio_key5 {
             gpios = <&pro_micro 19 GPIO_ACTIVE_HIGH>;
             label = "soft_off_5";
@@ -82,11 +57,6 @@
         
         /* List all soft_off keys here */
         input-keys = <
-            &soft_off_gpio_key0
-            &soft_off_gpio_key1
-            &soft_off_gpio_key2
-            &soft_off_gpio_key3
-            &soft_off_gpio_key4
             &soft_off_gpio_key5
         >;
         wakeup-source;
