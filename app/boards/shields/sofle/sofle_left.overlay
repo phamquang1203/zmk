@@ -29,7 +29,7 @@
         hw_soft_off: hw_soft_off {
             compatible = "zmk,behavior-soft-off";
             #binding-cells = <0>;
-            hold-time-ms = <2000>;
+            hold-time-ms = <0>;
             split-peripheral-off-on-press; // This remains ambiguous but let's comment out if invalid
             /* If this property is invalid, remove or properly define as per docs */
         };
