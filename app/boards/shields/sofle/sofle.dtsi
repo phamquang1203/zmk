@@ -16,10 +16,110 @@
         zephyr,display = &oled;
         zmk,kscan = &kscan0;
     };
-    soft_off_wakers {
-        compatible = "zmk,soft-off-wakeup-sources";
-        wakeup-sources = <&kscan0>;
-    };
+soft_off_wakers {
+    compatible = "zmk,soft-off-wakeup-sources";
+    wakeup-sources = <
+        &gpio_d2 &gpio_d3 &gpio_d4 &gpio_d5 &gpio_d6 &gpio_d7 &gpio_d8 &gpio_d9
+        &gpio_d10 &gpio_d11 &gpio_d14 &gpio_d15 &gpio_d18 &gpio_d19 &gpio_d20 &gpio_d21
+    >;
+};
+
+gpio_d2: gpio_d2 {
+    compatible = "zmk,gpio-wakeup-pin";
+    gpios = <&pro_micro 17 GPIO_ACTIVE_HIGH>;
+    sense = <1>;
+};
+
+gpio_d3: gpio_d3 {
+    compatible = "zmk,gpio-wakeup-pin";
+    gpios = <&pro_micro 20 GPIO_ACTIVE_HIGH>;
+    sense = <1>;
+};
+
+gpio_d4: gpio_d4 {
+    compatible = "zmk,gpio-wakeup-pin";
+    gpios = <&pro_micro 22 GPIO_ACTIVE_HIGH>;
+    sense = <1>;
+};
+
+gpio_d5: gpio_d5 {
+    compatible = "zmk,gpio-wakeup-pin";
+    gpios = <&pro_micro 24 GPIO_ACTIVE_HIGH>;
+    sense = <1>;
+};
+
+gpio_d6: gpio_d6 {
+    compatible = "zmk,gpio-wakeup-pin";
+    gpios = <&pro_micro 32 GPIO_ACTIVE_HIGH>;
+    sense = <1>;
+};
+
+gpio_d7: gpio_d7 {
+    compatible = "zmk,gpio-wakeup-pin";
+    gpios = <&pro_micro 11 GPIO_ACTIVE_HIGH>;
+    sense = <1>;
+};
+
+gpio_d8: gpio_d8 {
+    compatible = "zmk,gpio-wakeup-pin";
+    gpios = <&pro_micro 36 GPIO_ACTIVE_HIGH>;
+    sense = <1>;
+};
+
+gpio_d9: gpio_d9 {
+    compatible = "zmk,gpio-wakeup-pin";
+    gpios = <&pro_micro 38 GPIO_ACTIVE_HIGH>;
+    sense = <1>;
+};
+
+gpio_d10: gpio_d10 {
+    compatible = "zmk,gpio-wakeup-pin";
+    gpios = <&pro_micro 9 GPIO_ACTIVE_HIGH>;
+    sense = <1>;
+};
+
+gpio_d11: gpio_d11 {
+    compatible = "zmk,gpio-wakeup-pin";
+    gpios = <&pro_micro 10 GPIO_ACTIVE_HIGH>;
+    sense = <1>;
+};
+
+gpio_d14: gpio_d14 {
+    compatible = "zmk,gpio-wakeup-pin";
+    gpios = <&pro_micro 43 GPIO_ACTIVE_HIGH>;
+    sense = <1>;
+};
+
+gpio_d15: gpio_d15 {
+    compatible = "zmk,gpio-wakeup-pin";
+    gpios = <&pro_micro 45 GPIO_ACTIVE_HIGH>;
+    sense = <1>;
+};
+
+gpio_d18: gpio_d18 {
+    compatible = "zmk,gpio-wakeup-pin";
+    gpios = <&pro_micro 47 GPIO_ACTIVE_HIGH>;
+    sense = <1>;
+};
+
+gpio_d19: gpio_d19 {
+    compatible = "zmk,gpio-wakeup-pin";
+    gpios = <&pro_micro 2 GPIO_ACTIVE_HIGH>;
+    sense = <1>;
+};
+
+gpio_d20: gpio_d20 {
+    compatible = "zmk,gpio-wakeup-pin";
+    gpios = <&pro_micro 29 GPIO_ACTIVE_HIGH>;
+    sense = <1>;
+};
+
+gpio_d21: gpio_d21 {
+    compatible = "zmk,gpio-wakeup-pin";
+    gpios = <&pro_micro 31 GPIO_ACTIVE_HIGH>;
+    sense = <1>;
+};
+
 
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
