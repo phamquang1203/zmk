@@ -24,7 +24,7 @@
     status = "okay";
 };
 
-& {
+/ {
     behaviors {
         hw_soft_off: hw_soft_off {
             compatible = "zmk,behavior-soft-off";
