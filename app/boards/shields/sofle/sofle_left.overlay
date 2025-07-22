@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2020 Ryan Cross
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
 #include "sofle.dtsi"
 
 &kscan0 {
@@ -14,15 +20,4 @@
 
 &left_encoder {
     status = "okay";
-};
-
-wakeup_scan: wakeup_scan {
-    compatible = "zmk,gpio-key-wakeup-trigger";
-    trigger = <&kscan0>;
-    wakeup-source;
-};
-
-soft_off_wakers {
-    compatible = "zmk,soft-off-wakeup-sources";
-    wakeup-sources = <&wakeup_scan>;
 };
