@@ -67,4 +67,4 @@
           &gpio_19 &gpio_18 &gpio_15 &gpio_14 &gpio_16 &gpio_10
         >;
     };
-}
+};
